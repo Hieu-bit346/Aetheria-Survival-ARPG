@@ -3,7 +3,7 @@
 Đây là dự án đồ án môn học Trí tuệ nhân tạo, Blockchain và ứng dụng sử dụng HTML5 Canvas và JavaScript thuần.
 
 ## 🔗 Link Chơi Game Trực Tiếp
-[BẤM VÀO ĐÂY ĐỂ CHƠI GAME](Dán_đường_link_GitHub_Pages_của_bạn_vào_đây)
+[BẤM VÀO ĐÂY ĐỂ CHƠI GAME](https://hieu-bit346.github.io/Aetheria-Survival-ARPG/)
 
 ## 🎮 Hướng dẫn điều khiển
 - **Di chuyển:** WASD (hoặc Phím mũi tên).
