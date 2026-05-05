@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aetheria: Survivor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="game"></canvas>
+    
+    <div id="ui-layer">
+        <!-- Màn Hình Chính -->
+        <div id="screen-main" class="screen menu-bg">
+            <h1>AETHERIA</h1>
+            <div class="subtitle">ĐẤU TRƯỜNG VÔ TẬN</div>
+            <div class="author-text">Game được tạo ra bởi Trần Thanh Bình CTK49A</div>
+            
+            <button onclick="startGame()">Bắt Đầu Sinh Tồn</button>
+            <button onclick="toggleSettings('main')">Cài Đặt</button>
+        </div>
+
+        <!-- Màn Hình Cài Đặt -->
+        <div id="screen-settings" class="screen menu-bg hidden">
+            <div class="settings-panel">
+                <h2 style="color:#f39c12; margin-bottom: 20px;">CÀI ĐẶT</h2>
+                <div class="setting-item">
+                    <label>Âm lượng: <input type="range" id="vol-slider" min="0" max="1" step="0.1" value="0.5"></label>
+                </div>
+                <div class="setting-item">
+                    <label>Rung màn hình: <input type="checkbox" id="shake-toggle" checked style="transform: scale(1.5); margin-left: 10px;"></label>
+                </div>
+                <div class="setting-item">
+                    <label>Phím di chuyển: 
+                        <select id="control-select" onchange="changeControls(this.value)">
+                            <option value="wasd">WASD</option>
+                            <option value="arrows">Mũi Tên (Arrows)</option>
+                        </select>
+                    </label>
+                </div>
+                <button onclick="closeSettings()" style="margin-top:20px;">Đóng</button>
+            </div>
+        </div>
+
+        <div id="screen-pause" class="screen hidden">
+            <h1 style="color:#f39c12;">TẠM DỪNG</h1>
+            <button onclick="resumeGame()">Tiếp tục</button>
+            <button onclick="toggleSettings('pause')">Cài đặt</button>
+            <button onclick="location.reload()">Thoát ra Menu</button>
+        </div>
+
+        <div id="screen-gameover" class="screen hidden">
+            <h1 style="color:#e74c3c;">TỬ TRẬN</h1>
+            <p id="death-stats" style="font-size:24px; margin-bottom:20px; font-weight:bold;"></p>
+            <button onclick="location.reload()">Chơi lại</button>
+        </div>
+
+        <!-- Giao Diện Trong Game (HUD) -->
+        <div id="hud" class="hidden">
+            <div class="hud hud-top-left">
+                <div id="level-display">CẤP ĐỘ 1</div>
+                <div class="bar-container"><div id="exp-bar" class="bar"></div><span class="bar-label">KINH NGHIỆM</span></div>
+                <div class="bar-container"><div id="hp-bar" class="bar"></div><span class="bar-label" id="hp-text">HP</span></div>
+                <div class="bar-container"><div id="sta-bar" class="bar"></div><span class="bar-label">THỂ LỰC</span></div>
+                <div id="weapon-display">Vũ khí: Kiếm Tiêu Chuẩn</div>
+                
+                <div id="key-guide">
+                    <span id="guide-move" class="key">WASD</span> Di chuyển <br>
+                    <span class="key">Chuột Trái</span> Đánh thường<br>
+                    <span class="key">Space</span> Lướt | <span class="key">Shift</span> Chạy nhanh<br>
+                    <!-- Hướng dẫn Skill tự thay đổi -->
+                    <span id="guide-skills-text">
+                        <span class="key" id="guide-s1">C</span> Lửa | 
+                        <span class="key" id="guide-s2">F</span> Nước | 
+                        <span class="key" id="guide-s3">G</span> Gió | 
+                        <span class="key" id="guide-s4">V</span> Đất
+                    </span>
+                </div>
+            </div>
+            
+            <div class="hud hud-top-right">
+                <div id="timer-display">00:00</div>
+                <div id="kill-counter">Kẻ địch tiêu diệt: 0</div>
+            </div>
+            
+            <!-- THANH KỸ NĂNG -->
+            <div class="hud hud-bottom-center">
+                <div class="skill-btn" id="btn-1"><div class="cd-overlay" id="cd-1"></div><span class="icon" id="icon-1">🔥</span><span class="key-hint" id="hint-1">C</span></div>
+                <div class="skill-btn" id="btn-2"><div class="cd-overlay" id="cd-2"></div><span class="icon" id="icon-2">🌊</span><span class="key-hint" id="hint-2">V</span></div>
+                <div class="skill-btn locked" id="btn-3"><div class="cd-overlay" id="cd-3"></div><span class="icon" id="icon-3">🌪️</span><span class="key-hint" id="hint-3">F</span></div>
+                <div class="skill-btn locked" id="btn-4"><div class="cd-overlay" id="cd-4"></div><span class="icon" id="icon-4">🪨</span><span class="key-hint" id="hint-4">G</span></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

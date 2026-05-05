@@ -1,0 +1,47 @@
+* { box-sizing: border-box; margin: 0; padding: 0; user-select: none; }
+body { background: #000; color: #fff; font-family: 'Segoe UI', Tahoma, sans-serif; overflow: hidden; }
+canvas { display: block; width: 100vw; height: 100vh; image-rendering: pixelated; }
+
+#ui-layer { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 10;}
+.screen { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; background: rgba(0,0,0,0.85); pointer-events: auto; }
+.menu-bg { background: rgba(0,0,0, 0.6) !important; backdrop-filter: blur(3px); }
+.hidden { display: none !important; }
+
+h1 { font-size: 65px; color: #f39c12; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 5px; text-align: center;}
+.subtitle { font-size: 30px; color: #e74c3c; margin-bottom: 10px; font-weight: bold; letter-spacing: 3px;}
+.author-text { font-size: 18px; color: #bdc3c7; margin-bottom: 30px; letter-spacing: 1px; }
+
+button { padding: 15px 40px; font-size: 22px; margin: 10px; cursor: pointer; background: rgba(44, 62, 80, 0.9); color: #ecf0f1; border: 2px solid #34495e; border-radius: 8px; font-weight: bold; transition: 0.2s; box-shadow: 0 4px 0 #1abc9c; pointer-events: auto;}
+button:hover { background: #1abc9c; transform: translateY(2px); box-shadow: 0 2px 0 #16a085; color: #fff; }
+
+.settings-panel { background: rgba(30,30,30,0.9); padding: 30px; border-radius: 10px; border: 2px solid #555; text-align: center; pointer-events: auto;}
+.setting-item { margin: 15px 0; font-size: 18px; }
+
+.hud { position: absolute; padding: 20px; pointer-events: auto; }
+.hud-top-left { top: 0; left: 0; width: 350px; }
+.hud-top-right { top: 0; right: 0; text-align: right; }
+.hud-bottom-center { bottom: 20px; left: 50%; transform: translateX(-50%); display: flex; gap: 15px; align-items: center; background: rgba(0,0,0,0.7); padding: 15px 25px; border-radius: 20px; border: 2px solid #444;}
+
+.bar-container { width: 100%; height: 22px; background: #222; border: 2px solid #000; margin-bottom: 8px; border-radius: 11px; overflow: hidden; position: relative; box-shadow: inset 0 2px 5px rgba(0,0,0,0.8); }
+.bar { height: 100%; transition: width 0.1s linear; }
+.bar-label { position: absolute; top: 0; left: 10px; font-size: 13px; font-weight: bold; line-height: 22px; text-shadow: 1px 1px 0 #000; }
+#hp-bar { background: linear-gradient(90deg, #c0392b, #e74c3c); width: 100%; }
+#sta-bar { background: linear-gradient(90deg, #d35400, #f1c40f); width: 100%; }
+#exp-bar { background: linear-gradient(90deg, #2980b9, #3498db); width: 0%; }
+
+/* --- CSS MỚI CHO 4 NÚT KỸ NĂNG --- */
+.skill-btn { position: relative; width: 60px; height: 60px; border-radius: 50%; border: 3px solid #7f8c8d; background: #2c3e50; display: flex; justify-content: center; align-items: center; font-size: 28px; box-shadow: 0 4px 10px rgba(0,0,0,0.8); overflow: hidden; transition: 0.2s;}
+.skill-btn .cd-overlay { position: absolute; bottom: 0; left: 0; width: 100%; height: 0%; background: rgba(0,0,0,0.7); transition: height 0.1s linear; }
+.skill-btn .key-hint { position: absolute; top: -5px; right: -5px; background: #fff; color: #000; font-size: 12px; font-weight: bold; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 2px solid #000;}
+#btn-1 { border-color: #e74c3c; } #btn-2 { border-color: #3498db; } #btn-3 { border-color: #2ecc71; } #btn-4 { border-color: #e67e22; }
+.skill-ready { box-shadow: 0 0 15px currentColor; transform: scale(1.1); }
+
+#level-display { font-size: 24px; color: #f1c40f; font-weight: bold; text-shadow: 2px 2px 0 #000; margin-bottom: 5px; }
+#weapon-display { margin-top: 10px; font-size: 16px; color: #bdc3c7; font-weight: bold; background: rgba(0,0,0,0.5); padding: 5px 10px; border-radius: 5px; display: inline-block;}
+#timer-display { background: rgba(20,20,20,0.85); padding: 15px; border-radius: 8px; border-top: 5px solid #f39c12; font-size: 30px; font-weight: bold; font-family: monospace; text-align: center; color: #fff; box-shadow: 0 4px 10px rgba(0,0,0,0.8); margin-bottom: 10px; }
+#kill-counter { font-size: 20px; color: #e74c3c; text-shadow: 2px 2px 0 #000; font-weight: bold; }
+#key-guide { margin-top: 15px; background: rgba(0,0,0,0.6); padding: 10px; border-radius: 8px; font-size: 13px; color: #ccc; line-height: 1.8; border-left: 3px solid #7f8c8d;}
+.key { background: #333; padding: 2px 6px; border-radius: 4px; color: #fff; font-weight: bold; margin: 0 2px; }
+
+/* Hiệu ứng làm mờ chiêu chưa mở khóa */
+.locked { filter: grayscale(100%); opacity: 0.4; pointer-events: none; }
