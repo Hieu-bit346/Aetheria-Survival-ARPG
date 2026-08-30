@@ -55,10 +55,10 @@ const skillImages = {
     vfxFireStorm: 'Assets/Effects/VFX/VFX_FireStorm.png',
     rockZone: 'Assets/Effects/Skills/Rock_Zone.png', 
     vfxSandStorm: 'Assets/Effects/VFX/VFX_SandStorm.png',
-    burn: 'Assets/Effects/Debuff/Burn.png', 
-    wet: 'Assets/Effects/Debuff/Wet.png', 
-    stun: 'Assets/Effects/Debuff/Stun.png', 
-    freeze: 'Assets/Effects/Debuff/Freeze.png'
+    burn: 'Assets/Effects/DBbuff/Burn.png', 
+    wet: 'Assets/Effects/DeBuff/Wet.png', 
+    stun: 'Assets/Effects/DeBuff/Stun.png', 
+    freeze: 'Assets/Effects/DeBuff/Freeze.png'
 };
 
 for (const [key, src] of Object.entries(skillImages)) {
@@ -71,7 +71,7 @@ ASSETS.enemyProjectiles.badFire.src = 'Assets/Effects/MonsterSkills/BadFire_Ball
 ASSETS.enemyProjectiles.darkPurple.src = 'Assets/Effects/MonsterSkills/DarkPurple_Ball.png';
 
 // Backgrounds
-ASSETS.bg.src = 'Assets/Backgrounds/Green_BackGrounds/Green_Backgrounds.png'; 
+ASSETS.bg.src = 'Assets/Backgrounds/Green_Backgrounds/Green_Backgrounds.png'; 
 ASSETS.menuBg.src = 'Assets/Backgrounds/LoadingScreen/LoadingScreen.png';
 
 // Resources (Cây và Đá)
