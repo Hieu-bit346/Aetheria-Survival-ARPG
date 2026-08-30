@@ -1,6 +1,7 @@
 # ⚔️ AETHERIA - SURVIVAL ACTION RPG
 
 Đây là dự án đồ án môn học Trí tuệ nhân tạo, Blockchain và ứng dụng sử dụng HTML5 Canvas và JavaScript thuần.
+Với sự hỗ trợ từ các AI: Gemini, ChatGPT, Claue và Perplexity.
 
 ## 🔗 Link Chơi Game Trực Tiếp
 [BẤM VÀO ĐÂY ĐỂ CHƠI GAME](https://hieu-bit346.github.io/Aetheria-Survival-ARPG/)
@@ -20,3 +21,5 @@
 - **Hệ thống chọn vũ khí vĩnh viễn:** Xuất hiện khi đạt Cấp độ 8.
 - **AI Quái vật thông minh:** Quái có các pha nhảy bổ, bắn đạn tìm mục tiêu và cấp độ khó tăng dần theo thời gian.
 - **Đồ họa Pixel Art:** Tự thiết kế và tích hợp Sprite Animation.
+
+## Lời cảm ơn đặc biệt cho thầy Nguyễn Văn Huy Dũng
