@@ -8,7 +8,7 @@ Dự án là minh chứng cho quy trình phát triển sản phẩm độc lập
 
 ## 🚀 Trải Nghiệm Trực Tiếp
 
-👉 **[BẤM VÀO ĐÂY ĐỂ CHƠI](https://hieu-bit346.github.io/Aetheria-Survival-ARPG/)
+👉 **[BẤM VÀO ĐÂY ĐỂ CHƠI](https://hieu-bit346.github.io/Aetheria-Survival-ARPG/)**
 
 ## 🎮 Cách Chơi Cơ Bản
 
