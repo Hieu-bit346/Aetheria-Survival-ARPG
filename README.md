@@ -1,14 +1,14 @@
 ```markdown
 # ⚔️ AETHERIA: ĐẤU TRƯỜNG VÔ TẬN
 
-**Aetheria** là tựa game 2D Survival ARPG chạy trực tiếp trên nền tảng Web, được thực hiện như một đồ án tín chỉ **Trí tuệ nhân tạo và Blockchain**.
+**Aetheria** là tựa game 2D Survival ARPG chạy trực tiếp trên nền tảng Web, được thực hiện như một đồ án tín chỉ môn **Trí tuệ nhân tạo và Blockchain**.
 Dự án là minh chứng cho quy trình phát triển sản phẩm độc lập nhờ ứng dụng phương pháp **Vibe Coding** và hệ sinh thái **AI Agents** bao gồm Gemini, ChatGPT, Claue và Perplexity
 
 ---
 
 ## 🚀 Trải Nghiệm Trực Tiếp
 
-👉 **[BẤM VÀO ĐÂY ĐỂ CHƠI](https://hieu-bit346.github.io/Aetheria-Survival-ARPG/)**
+👉 **[BẤM VÀO ĐÂY ĐỂ TRẢI NGHIEM](https://hieu-bit346.github.io/Aetheria-Survival-ARPG/)**
 
 ## 🎮 Cách Chơi Cơ Bản
 
