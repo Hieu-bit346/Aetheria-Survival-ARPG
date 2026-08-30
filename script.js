@@ -55,7 +55,7 @@ const skillImages = {
     vfxFireStorm: 'Assets/Effects/VFX/VFX_FireStorm.png',
     rockZone: 'Assets/Effects/Skills/Rock_Zone.png', 
     vfxSandStorm: 'Assets/Effects/VFX/VFX_SandStorm.png',
-    burn: 'Assets/Effects/DBbuff/Burn.png', 
+    burn: 'Assets/Effects/DeBuff/Burn.png', 
     wet: 'Assets/Effects/DeBuff/Wet.png', 
     stun: 'Assets/Effects/DeBuff/Stun.png', 
     freeze: 'Assets/Effects/DeBuff/Freeze.png'
